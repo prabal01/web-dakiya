@@ -1,0 +1,1 @@
+importScripts('localhost:4444/script/sw')

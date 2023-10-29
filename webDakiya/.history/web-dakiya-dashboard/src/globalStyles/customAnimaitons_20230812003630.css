@@ -1,0 +1,12 @@
+.liftup {
+    transition: box-shadow .6s ease-out;
+     -webkit-transition:  box-shadow .2s ease-out;
+     box-shadow: .8px .9px 3px grey;
+   
+   }
+   .liftup:hover{ 
+        box-shadow: 1px 8px 20px grey;
+        transition:  box-shadow .2s ease-in;
+       -webkit-transition:  box-shadow .2s ease-in;
+     }
+    

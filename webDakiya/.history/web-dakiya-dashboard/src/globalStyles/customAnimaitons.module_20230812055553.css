@@ -1,0 +1,14 @@
+.liftup {
+    transition: box-shadow .6s ease-out;
+     -webkit-transition:  box-shadow .2s ease-out;
+   
+   }
+   .liftup:hover,.liftup{ 
+        box-shadow: 1px 8px 20px grey;
+        transition:  box-shadow .2s ease-in;
+       -webkit-transition:  box-shadow .2s ease-in;
+     }
+    
+     .liftup:active {
+      transform: scale(0.98) translateY(2px);
+    }

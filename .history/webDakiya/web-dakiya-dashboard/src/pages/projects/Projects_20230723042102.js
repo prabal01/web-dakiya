@@ -1,0 +1,21 @@
+import React, { useEffect, useState } from 'react'
+import { authRequest } from '../../utils/api';
+import { CircularProgress } from '@mui/material';
+import Button from '../../src/theme/overrides/Button';
+import { AppWidgetSummary } from '../../src/sections/@dashboard/app';
+// import { authRequest } from 'src/utils/api';
+
+export default function Projects() {
+  const [projects, setProjects] = useState([])
+  const [isProjectLoading, setIsProjectLoading] = useState(false);
+    useEffect(() => {
+        authRequest().get('/project').then(res=>console.log(res)).catch(err=>console.log(err))
+    }, []);
+
+  return <>
+    {isProjectLoading && <CircularProgress />}
+    {!isProjectLoading && projects.length===0 && <Button >Create Project</Button>}
+    {!isProjectLoading && projects.length>0 && projects.map(project=><AppWidgetSummary title={project.name}/>)}
+  </>
+
+}
